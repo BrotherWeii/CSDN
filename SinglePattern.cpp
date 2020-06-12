@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-////懒汉式
+//懒汉式
 class CSingletonLazy
 {
 public://提供全局的接口获取单例
@@ -73,9 +73,6 @@ public:	//C++11
 
 int main()
 {
-	//CSingleton::GetInstance()->Print();
-	//CSingleton::GetInstance()->Print();
-
 	for (int i = 0; i < 10; i++)
 	{
 		cout << CSingleton::GetInstance() << endl;
