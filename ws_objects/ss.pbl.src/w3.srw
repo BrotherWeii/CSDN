@@ -1,4 +1,4 @@
-HA$PBExportHeader$w3.srw
+﻿$PBExportHeader$w3.srw
 forward
 global type w3 from window
 end type
