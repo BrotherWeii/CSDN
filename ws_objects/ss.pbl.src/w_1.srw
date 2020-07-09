@@ -1,4 +1,4 @@
-﻿$PBExportHeader$w_1.srw
+HA$PBExportHeader$w_1.srw
 forward
 global type w_1 from window
 end type

@@ -1,4 +1,4 @@
-﻿$PBExportHeader$ss.sra
+HA$PBExportHeader$ss.sra
 $PBExportComments$Generated Application Object
 forward
 global type ss from application

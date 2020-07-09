@@ -3,5 +3,5 @@ Save Format v3.0(19990112)
  0 "ss.pbt";
 @end;
 DefaultTarget "ss.pbt";
-DefaultExportEncode "UTF-8";
+DefaultExportEncode "HEXANSCII";
 DefaultRemoteTarget "ss.pbt";
