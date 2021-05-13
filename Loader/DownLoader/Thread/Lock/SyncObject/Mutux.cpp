@@ -1,14 +1,13 @@
 #pragma once
 #include "Mutux.h"
 
-//Remark
-/*
-CreateMutex()         //创建互斥对象，并获得所有权
-ReleaseMutex()        //释放互斥对象所有权
-CloseHandle()         //销毁互斥对象
-WaitForSingleObject() //等待函数，请求互斥量的所有权
-OpenMutux()           //其他进程的线程可以通过名称获取该互斥对象的句柄
-*/
+/*******************************REMARK***********************************
+	CreateMutex()         //创建互斥对象，并获得所有权
+	ReleaseMutex()        //释放互斥对象所有权
+	CloseHandle()         //销毁对象
+	WaitForSingleObject() //等待函数，检查指定的对象当前状态，如果该对象为无信号，则调用线程进入等待状态，直到对象有信号或等待超时为止
+	OpenMutux()           //打开互斥对象，其他进程的线程可以通过名称获取该互斥对象的句柄                                                                     
+************************************************************************/
 
 namespace DownLoader{
 
@@ -51,6 +50,7 @@ namespace DownLoader{
 
 	bool CMutux::Create( LPCTSTR lpMutuxName, BOOL bInitOwener )
 	{
+		// if mutux exists, destroy it and create again
 		if (m_hMutux)
 			Destroy();
 
@@ -58,8 +58,9 @@ namespace DownLoader{
 		if (!hMutux)
 			return false;
 
+		// update the mutux info
 		m_hMutux = hMutux;
-		(nullptr == lpMutuxName) ? m_strMutuxName = L"" : m_strMutuxName = lpMutuxName;
+		(NULL == lpMutuxName) ? m_strMutuxName = L"" : m_strMutuxName = lpMutuxName;
 
 		return true;
 	}
